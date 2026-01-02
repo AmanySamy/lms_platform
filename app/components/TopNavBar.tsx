@@ -24,8 +24,8 @@ const TopNavBar = () => {
             </h2>
           </div>
           <nav className="hidden md:flex items-center gap-9">
-            {links.map((link) => (
-              <NavLink key={link.href} href={link.href}>
+            {links.map((link, index) => (
+              <NavLink key={index} href={link.href}>
                 {link.label}
               </NavLink>
             ))}

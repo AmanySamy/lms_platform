@@ -1,4 +1,4 @@
-type ButtonVariant = "primary" | "secondary" | "outline" | "white";
+type ButtonVariant = "primary" | "secondary" | "outline" | "white" | "text-primary";
 type ButtonSize = "sm" | "md" | "lg";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -10,6 +10,7 @@ const variantClasses = {
   secondary: "bg-gray-100 text-gray-900 hover:bg-gray-200",
   outline: "border border-primary text-primary hover:bg-primary/10",
   white: "bg-white dark:bg-transparent border border-gray-200 dark:border-gray-700 text-neutral-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800",
+  "text-primary": "bg-primary/10 hover:bg-primary hover:text-white text-primary",
 };
 
 const sizeClasses = {
