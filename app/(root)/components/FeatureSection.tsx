@@ -8,16 +8,20 @@ interface FeatureSectionProps {
   }[];
 }
 import FeatureCard from "./FeatureCard";
-const FeatureSection: React.FC<FeatureSectionProps> = ({ title, description, features }) => {
+const FeatureSection: React.FC<FeatureSectionProps> = ({
+  title,
+  description,
+  features,
+}) => {
   return (
-    <section className="w-full bg-background-light dark:bg-gray-900/50 py-16 md:py-24">
+    <section className="w-full bg-brand-subtle py-16 md:py-24">
       <div className="px-4 md:px-10 mx-auto max-w-7xl">
         <div className="flex flex-col gap-12">
           <div className="flex flex-col gap-4 text-center max-w-3xl mx-auto">
-            <h2 className="text-neutral-900 dark:text-white text-3xl md:text-4xl font-bold leading-tight">
+            <h2 className="text-text-primary text-3xl md:text-4xl font-bold leading-tight">
               {title}
             </h2>
-            <p className="text-gray-600 dark:text-gray-400 text-lg font-normal leading-relaxed">
+            <p className="text-text-muted-dark text-lg font-normal leading-relaxed">
               {description}
             </p>
           </div>

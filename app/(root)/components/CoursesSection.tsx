@@ -6,21 +6,24 @@ interface CoursesSectionProps {
   viewButton: { text: string; link: string };
   courses: CourseCardProps[];
 }
-const CoursesSection: React.FC<CoursesSectionProps> = ({ title, description, viewButton, courses }) => {
+const CoursesSection: React.FC<CoursesSectionProps> = ({
+  title,
+  description,
+  viewButton,
+  courses,
+}) => {
   return (
-    <section className="w-full bg-white dark:bg-background-dark py-16 md:py-24">
+    <section className="w-full bg-neutral-white py-16 md:py-24">
       <div className="px-4 md:px-10 mx-auto max-w-7xl flex flex-col gap-10">
         <div className="flex items-end justify-between">
           <div>
-            <h2 className="text-neutral-900 dark:text-white text-3xl md:text-4xl font-bold leading-tight mb-2">
+            <h2 className="text-text-primary text-3xl md:text-4xl font-bold leading-tight mb-2">
               {title}
             </h2>
-            <p className="text-gray-600 dark:text-gray-400 text-base">
-              {description}
-            </p>
+            <p className="text-text-muted-dark text-base">{description}</p>
           </div>
           <Link
-            className="hidden md:flex items-center gap-1 text-primary font-bold hover:underline"
+            className="hidden md:flex items-center gap-1 text-brand-main font-bold hover:underline"
             href={viewButton.link}
           >
             {viewButton.text}
@@ -36,7 +39,7 @@ const CoursesSection: React.FC<CoursesSectionProps> = ({ title, description, vie
         </div>
         <div className="md:hidden flex justify-center mt-4">
           <Link
-            className="flex items-center gap-1 text-primary font-bold hover:underline"
+            className="flex items-center gap-1 text-brand-main font-bold hover:underline"
             href={viewButton.link}
           >
             {viewButton.text}

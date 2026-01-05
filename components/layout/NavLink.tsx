@@ -1,0 +1,18 @@
+import Link from "next/link";
+import React from "react";
+
+const NavLink: React.FC<{ href: string; children: React.ReactNode }> = ({
+  href,
+  children,
+}) => {
+  return (
+    <Link
+      className="text-text-primary dark:text-gray-300 hover:text-brand-main text-sm font-medium leading-normal transition-colors"
+      href={href}
+    >
+      {children}
+    </Link>
+  );
+};
+
+export default NavLink;

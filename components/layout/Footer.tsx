@@ -1,34 +1,32 @@
 import React from "react";
-import { footer } from "../data/HomePage";
+import { footer } from "../../data/HomePage";
 
 const Footer = () => {
   return (
-    <footer className="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 pt-16 pb-8">
+    <footer className="bg-neutral-white border-t border-surface-divider pt-16 pb-8">
       <div className="px-4 md:px-10 mx-auto max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
           <div className="col-span-1 md:col-span-1 flex flex-col gap-4">
-            <div className="flex items-center gap-2 text-neutral-900 dark:text-white">
-              <div className="size-6 text-primary flex items-center justify-center">
+            <div className="flex items-center gap-2 text-text-primary">
+              <div className="size-6 text-brand-main flex items-center justify-center">
                 <span className="material-symbols-outlined text-2xl">
                   school
                 </span>
               </div>
               <h2 className="text-lg font-bold">{footer.company}</h2>
             </div>
-            <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+            <p className="text-text-muted-dark text-sm leading-relaxed">
               {footer.description}
             </p>
           </div>
           {footer.menus.map((menu, index) => (
             <div key={index}>
-              <h3 className="text-neutral-900 dark:text-white font-bold mb-4">
-                {menu.title}
-              </h3>
-              <ul className="flex flex-col gap-3 text-sm text-gray-500 dark:text-gray-400">
+              <h3 className="text-text-primary font-bold mb-4">{menu.title}</h3>
+              <ul className="flex flex-col gap-3 text-sm text-text-muted-dark">
                 {menu.links.map((link, index) => (
                   <li key={index}>
                     <a
-                      className="hover:text-primary transition-colors"
+                      className="hover:text-brand-main transition-colors"
                       href={link.href}
                     >
                       {link.text}
@@ -40,31 +38,29 @@ const Footer = () => {
           ))}
 
           <div>
-            <h3 className="text-neutral-900 dark:text-white font-bold mb-4">
-              Stay Updated
-            </h3>
-            <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
+            <h3 className="text-text-primary font-bold mb-4">Stay Updated</h3>
+            <p className="text-sm text-text-muted-dark mb-4">
               Subscribe to our newsletter for tips and updates.
             </p>
             <div className="flex gap-2">
               <input
-                className="flex-1 h-10 px-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50"
+                className="flex-1 h-10 px-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-neutral-white text-sm focus:outline-none focus:ring-2 focus:ring-primary/50"
                 placeholder="Enter your email"
                 type="email"
               />
-              <button className="h-10 px-4 bg-primary text-white rounded-lg text-sm font-bold hover:bg-blue-700 transition-colors">
+              <button className="h-10 px-4 bg-brand-main text-white rounded-lg text-sm font-bold hover:bg-blue-700 transition-colors">
                 Subscribe
               </button>
             </div>
           </div>
         </div>
-        <div className="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="border-t border-surface-divider dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-400 text-sm">
             © 2024 English LMS. All rights reserved.
           </p>
           <div className="flex gap-6">
             <a
-              className="text-gray-400 hover:text-primary transition-colors"
+              className="text-gray-400 hover:text-brand-main transition-colors"
               href="#"
             >
               <span className="sr-only">Facebook</span>
@@ -82,7 +78,7 @@ const Footer = () => {
               </svg>
             </a>
             <a
-              className="text-gray-400 hover:text-primary transition-colors"
+              className="text-gray-400 hover:text-brand-main transition-colors"
               href="#"
             >
               <span className="sr-only">Twitter</span>
@@ -96,7 +92,7 @@ const Footer = () => {
               </svg>
             </a>
             <a
-              className="text-gray-400 hover:text-primary transition-colors"
+              className="text-gray-400 hover:text-brand-main transition-colors"
               href="#"
             >
               <span className="sr-only">Instagram</span>
